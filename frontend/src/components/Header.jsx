@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
 import { Link } from "react-router-dom";
 import React from "react";
+import CatalogueDropdown from "./CatalogueDropdown"; // at top
 
 export default function Header() {
   return (
@@ -42,13 +43,8 @@ export default function Header() {
               Accueil
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 ease-out group-hover:w-full"></span>
             </a>
-            <a
-              href="#"
-              className="relative text-white transition-colors duration-300 hover:text-yellow-400 group"
-            >
-              Catalogue
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 ease-out group-hover:w-full"></span>
-            </a>
+            <CatalogueDropdown />
+
             <a
               href="#"
               className="relative text-white transition-colors duration-300 hover:text-yellow-400 group"

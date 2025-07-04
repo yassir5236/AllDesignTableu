@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 
 export default function RecentWorks() {
   const works = [
     {
-      image: "/placeholder.svg?height=400&width=350",
+      image: "/images/work1.jpg",
     },
     {
-      image: "/placeholder.svg?height=400&width=350",
+      image: "/images/work2.jpg",
     },
     {
-      image: "/placeholder.svg?height=400&width=350",
+      image: "/images/work3.jpg",
     },
-  ]
+  ];
 
   return (
     <section className="py-20 bg-white">
@@ -24,10 +24,22 @@ export default function RecentWorks() {
               <br />
             </h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Chaque projet est discuté individuellement avec le client. Nous prenons en compte tous les souhaits et
-              proposons des solutions optimales pour créer un espace confortable et fonctionnel.
+              Chaque projet que nous réalisons est le fruit d’une collaboration
+              étroite avec nos clients. Nous prenons le temps d’écouter leurs
+              envies, de comprendre leurs besoins et de leur proposer des
+              solutions personnalisées, à la fois esthétiques, fonctionnelles et
+              adaptées à leur espace de vie. Notre équipe d’artistes et de
+              spécialistes, forte de 10 à 20 ans d’expérience, met tout son
+              savoir-faire au service de la qualité et du détail. Qu’il s’agisse
+              de tableaux abstraits, modernes ou classiques, chaque création est
+              conçue avec passion pour refléter votre style et sublimer votre
+              intérieur. Découvrez nos réalisations pour vous inspirer et
+              imaginer le tableau qui transformera votre mur en une véritable
+              œuvre d’art
             </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">Nos spécialistes ont de 10 à 20 ans d'expérience.</p>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Nos spécialistes ont de 10 à 20 ans d'expérience.
+            </p>
             <button className="bg-yellow-400 text-black px-8 py-3 rounded font-medium hover:bg-yellow-500 transition-colors">
               Voir tout
             </button>
@@ -48,5 +60,5 @@ export default function RecentWorks() {
         </div>
       </div>
     </section>
-  )
+  );
 }

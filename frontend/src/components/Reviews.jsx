@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 
 export default function Reviews() {
   const reviews = [
     {
       name: "Anastasie Dubois",
       text: "Je suis absolument ravie du résultat ! La cuisine est exactement comme je l'avais rêvée. Merci beaucoup pour ce travail professionnel. Très satisfaite de la qualité et des délais de réalisation.",
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "/images/face1.jpg",
     },
     {
       name: "Michel Lefebvre",
       text: "Excellent service ! Tout a été fait dans les temps et avec une haute qualité. Les meubles sont magnifiques, tous les membres de la famille sont satisfaits. Je recommanderai certainement à mes amis.",
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "/images/face2.jpg",
     },
-  ]
+  ];
 
   return (
     <section className="py-20 bg-gray-50">
@@ -22,14 +22,34 @@ export default function Reviews() {
         <div className="relative">
           {/* Navigation Arrows */}
           <button className="absolute left-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors z-10">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
 
           <button className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors z-10">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
 
@@ -54,5 +74,5 @@ export default function Reviews() {
         </div>
       </div>
     </section>
-  )
+  );
 }

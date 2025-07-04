@@ -5,12 +5,12 @@ import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 
 const options = [
-  "Canapés",
-  "Lits",
-  "Tables",
-  "Chaises",
-  "Décoration",
-  "Étagères",
+  "Art islamique",
+  "Villes & monuments",
+  "Art Abstrait",
+  "Portrait figuratif",
+  "Culture du Maroc",
+  "Musique",
 ];
 
 export default function CatalogueDropdown() {

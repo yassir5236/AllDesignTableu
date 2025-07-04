@@ -1,46 +1,62 @@
 import React from 'react';
+import ProductCard from './ProductCard';
+
 
 
 export default function Catalog() {
-  const categories = [
+  const products = [
     {
-      title: "Dressings",
-      image: "/placeholder.svg?height=300&width=250",
+      id: 1,
+      title: "FLORAL GUERRAB",
+      image: "/images/catalog1.webp",
+      currentPrice: "209.30 dh",
+      originalPrice: "299.00 dh",
+      discount: "-30%"
     },
     {
-      title: "Mobilier de cuisine",
-      image: "/placeholder.svg?height=300&width=250",
+      id: 2,
+      title: "SUMMER DRESS",
+      image: "/images/catalog2.webp",
+      currentPrice: "189.50 dh",
+      originalPrice: "250.00 dh",
+      discount: "-25%"
     },
     {
-      title: "Mobilier de chambre",
-      image: "/placeholder.svg?height=300&width=250",
+      id: 3,
+      title: "ELEGANT ROBE",
+      image: "/images/catalog3.webp",
+      currentPrice: "239.90 dh",
+      originalPrice: "320.00 dh",
+      discount: "-20%"
     },
+
     {
-      title: "Mobilier de salon",
-      image: "/placeholder.svg?height=300&width=250",
+      id: 5,
+      title: "EVENING GOWN",
+      image: "/images/catalog5.webp",
+      currentPrice: "349.00 dh",
+      originalPrice: "499.00 dh",
+      discount: "-30%"
     },
-  ]
+  ];
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-light text-gray-800 mb-16">Catalogue</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {categories.map((category, index) => (
-            <div key={index} className="group cursor-pointer">
-              <div className="aspect-[4/5] overflow-hidden rounded-lg mb-4">
-                <img
-                  src={category.image || "/placeholder.svg"}
-                  alt={category.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h3 className="text-lg font-medium text-gray-800 text-center">{category.title}</h3>
-            </div>
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12">Our Collection</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              title={product.title}
+              image={product.image}
+              currentPrice={product.currentPrice}
+              originalPrice={product.originalPrice}
+              discount={product.discount}
+            />
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

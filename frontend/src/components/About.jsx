@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 
 export default function About() {
   return (
@@ -9,7 +8,7 @@ export default function About() {
           {/* Image */}
           <div className="order-2 lg:order-1">
             <img
-              src="/placeholder.svg?height=500&width=600"
+              src="/images/apropo.jpg"
               alt="Modern kitchen interior"
               className="w-full h-[500px] object-cover rounded-lg"
             />
@@ -17,22 +16,23 @@ export default function About() {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-4xl font-light text-gray-800 mb-8">À propos de nous</h2>
+            <h2 className="text-4xl font-light text-gray-800 mb-8">
+              À propos de nous
+            </h2>
 
             <div className="bg-yellow-400 p-8 rounded-lg">
               <p className="text-gray-800 mb-6 leading-relaxed">
-                Le studio de design d'intérieur a réalisé plus de 8000 projets en France, Belgique, Suisse, Luxembourg
-                et Monaco. La France figure dans le top 3 des pays par nombre de projets réalisés.
+              Promouvoir l'art marocain en offrant des créations uniques qui embellissent les espaces de vie et de travail, tout en soutenant les artistes locaux.
               </p>
 
               <p className="text-gray-800 leading-relaxed">
-                Des meubles utilisant des technologies de fabrication modernes, ainsi que des designers professionnels
-                créent. Plus de 2000 - 2500 par mois au total ! Nous sommes Best Design Company.
+             Nous allions art, passion et esthétique pour
+                transformer vos murs en espaces vivants et inspirants.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

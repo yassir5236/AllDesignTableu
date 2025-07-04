@@ -6,19 +6,21 @@ import Catalog from "./components/Catalog";
 import About from "./components/About";
 import RecentWorks from "./components/RecentWorks";
 import Reviews from "./components/Reviews";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <div className="">
-          <Navbar />
-          <Hero />
-       
+        <Navbar />
+        <Hero />
 
         <Catalog />
         <About />
         <RecentWorks />
         <Reviews />
+
+        <Footer/>
       </div>
     </>
   );

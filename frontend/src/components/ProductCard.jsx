@@ -6,7 +6,7 @@ const ProductCard = ({ title, image, currentPrice, originalPrice, discount }) =>
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative max-w-xs overflow-hidden rounded-lg shadow-lg bg-white transition-all duration-300 hover:shadow-xl">
+    <div className="relative max-w-xs overflow-hidden rounded shadow-lg bg-white transition-all duration-300 hover:shadow-xl">
       {/* Sale Badge */}
       {discount && (
         <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">

@@ -7,22 +7,34 @@ import About from "./components/About";
 import RecentWorks from "./components/RecentWorks";
 import Reviews from "./components/Reviews";
 import Footer from "./components/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Register from "./pages/Register";
 
 function App() {
   return (
-    <>
-      <div className="">
-        <Navbar />
-        <Hero />
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Navbar />
+            <Hero />
+            <Catalog />
+            <About />
+            <RecentWorks />
+            <Reviews />
+            <Footer />
+          </>
+        }
+      />
 
-        <Catalog />
-        <About />
-        <RecentWorks />
-        <Reviews />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
-        <Footer/>
-      </div>
-    </>
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
   );
 }
 

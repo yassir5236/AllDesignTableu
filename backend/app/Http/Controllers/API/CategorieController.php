@@ -70,4 +70,12 @@ public function destroy(Categorie $categorie)
         'message' => 'categorie deleted successfully'
     ]);
 }
+
+
+public function produitsParCategorie($id)
+{
+    $categorie = Categorie::findOrFail($id);
+    $produits = $categorie->produits; // Assure-toi d'avoir la relation définie
+    return response()->json(['produits' => $produits]);
+}
 }

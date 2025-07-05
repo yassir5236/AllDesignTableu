@@ -1,17 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import api from "../axios";
-
+import { useNavigate } from "react-router-dom";
 
 export default function CatalogueDropdown({ categories }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const timeoutRef = useRef(null);
+  const navigate = useNavigate();
 
-  const handleSelect = (option) => {
-    console.log("Selected:", option);
-    setIsOpen(false);
-  };
+const handleSelect = (cat) => {
+  navigate(`/categorie/${cat.id}`); // ✅ Utiliser cat.id
+  setIsOpen(false);
+};
 
   // Close if clicking outside
   useEffect(() => {
@@ -52,14 +53,16 @@ export default function CatalogueDropdown({ categories }) {
             categories.map((cat) => (
               <div
                 key={cat.id}
-                onClick={() => handleSelect(cat.nom)}
+                onClick={() => handleSelect(cat)}
                 className="px-5 py-3 text-sm text-gray-800 hover:bg-yellow-100 cursor-pointer transition duration-200"
               >
                 {cat.nom}
               </div>
             ))
           ) : (
-            <div className="px-5 py-3 text-sm text-gray-400">Aucune catégorie</div>
+            <div className="px-5 py-3 text-sm text-gray-400">
+              Aucune catégorie
+            </div>
           )}
         </div>
       )}

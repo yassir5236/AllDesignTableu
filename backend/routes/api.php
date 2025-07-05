@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\ProduitController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
@@ -36,4 +37,14 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
+    Route::get('/produits', [ProduitController::class, 'index']);
+    Route::post('/produits', [ProduitController::class, 'store']);
+    Route::get('/produits/{id}', [ProduitController::class, 'show']);
+    Route::put('/produits/{id}', [ProduitController::class, 'update']); // POST instead of PUT
+    Route::delete('/produits/{id}', [ProduitController::class, 'destroy']);
 });
+
+
+Route::get('/categories/{id}/produits', [CategorieController::class, 'produitsParCategorie']);
+
+

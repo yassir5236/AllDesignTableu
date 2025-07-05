@@ -11,6 +11,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register";
+import CategorieView from "./pages/CategorieView";
+import EditProduit from "./components/EditProduit";
 
 function App() {
   return (
@@ -29,9 +31,11 @@ function App() {
           </>
         }
       />
+      <Route path="/categorie/:id" element={<CategorieView />} />
 
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/produits/edit/:id" element={<EditProduit />} />
 
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>

@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import CreateProduct from "../components/CreateProduct";
+
 import api from "../axios";
 import {
   Bell,
@@ -26,6 +28,7 @@ const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
   const [refreshSignal, setRefreshSignal] = useState(0);
+  const [showProductForm, setShowProductForm] = useState(false);
 
   const handleRefreshCategories = () => {
     setRefreshSignal((prev) => prev + 1);
@@ -168,6 +171,17 @@ const Dashboard = () => {
         <div className="container mx-auto p-4">
           <CategoryManager onChange={handleRefreshCategories} />
         </div>
+
+        <button
+          onClick={() => setShowProductForm(true)}
+          className="bg-green-600 text-white p-2 rounded"
+        >
+          Ajouter un produit
+        </button>
+
+        {showProductForm && (
+          <CreateProduct onProductCreated={() => setShowProductForm(false)} />
+        )}
         {/* Header */}
         {/*  <header className="bg-white shadow-sm border-b border-gray-200">
           <div className="flex items-center justify-between px-6 py-4">

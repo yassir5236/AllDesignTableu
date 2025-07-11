@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 import api from "../axios";
 import { useNavigate } from "react-router-dom";
 
-export default function CatalogueDropdown({ categories }) {
+export default function CatalogueDropdown({ categories ,textColorCategory }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const timeoutRef = useRef(null);
@@ -41,8 +41,10 @@ const handleSelect = (cat) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex items-center gap-1 text-white hover:text-yellow-400 transition duration-300 relative group cursor-pointer">
-        Catalogue
+     
+      <div className={`${
+                  textColorCategory === "black" ? "text-gray-600  " : "text-white/90"} flex items-center gap-1 font-medium text-sm  hover:text-yellow-400 transition duration-300 relative group cursor-pointer`}>
+        CATALOGUE
         <ChevronDown className="w-4 h-4" />
         <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 ease-out group-hover:w-full"></span>
       </div>

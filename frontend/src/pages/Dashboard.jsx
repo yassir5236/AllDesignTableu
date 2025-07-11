@@ -165,7 +165,7 @@ const Dashboard = () => {
 
       {/* Main Content */}
       <div className="flex-1 overflow-x-hidden">
-        <div className="bg-red-600 p-10 mt-10">
+        <div className="bg-red-600 p-10 ">
           <Header refreshSignal={refreshSignal} />
         </div>
         <div className="container mx-auto p-4">

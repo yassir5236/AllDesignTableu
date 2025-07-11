@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Produit extends Model
 {
     use HasFactory;
-       protected $fillable = [
+    protected $fillable = [
         'nom',
         'prix',
         'note',
@@ -17,8 +17,13 @@ class Produit extends Model
         'categorie_id',
     ];
 
-      public function categorie()
+    public function categorie()
     {
         return $this->belongsTo(Categorie::class);
+    }
+
+    public function dimensions()
+    {
+        return $this->belongsToMany(Dimension::class, 'dimension_produit');
     }
 }
